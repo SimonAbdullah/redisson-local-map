@@ -1,13 +1,17 @@
 {
-  "name": "inventory-manager-client",
+  "name": "redisson-put-client",
   "version": "1.0.0",
-  "description": "",
+  "description": "Redisson client to distribute changes to Redisson local cache",
   "scripts": {
     "start": "node ./src/index.js",
     "test": "node ./src/test.js"
   },
-  "author": "",
+  "author": "Simon Abdullah",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SimonAbdullah/redisson-put-client/issues"
+  },
+  "homepage": "https://github.com/SimonAbdullah/redisson-put-client",
   "dependencies": {
     "highwayhash-nodejs": "^1.0.5",
     "redis": "^4.0.3"
