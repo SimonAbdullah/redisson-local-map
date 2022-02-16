@@ -1,6 +1,6 @@
 {
   "name": "redisson-local-map",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Redisson client to distribute changes to Redisson local cache",
   "scripts": {
     "start": "node ./src/index.js",
