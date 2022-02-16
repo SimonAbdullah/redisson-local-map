@@ -1,3 +1,3 @@
-const { getInstance } = require("./redisson-put-client");
+const { getInstance } = require("./redisson-local-map");
 
 module.exports = { getInstance };

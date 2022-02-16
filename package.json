@@ -1,5 +1,5 @@
 {
-  "name": "redisson-put-client",
+  "name": "redisson-local-map",
   "version": "1.0.0",
   "description": "Redisson client to distribute changes to Redisson local cache",
   "scripts": {
