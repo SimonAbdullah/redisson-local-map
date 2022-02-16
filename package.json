@@ -9,9 +9,9 @@
   "author": "Simon Abdullah",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SimonAbdullah/redisson-put-client/issues"
+    "url": "https://github.com/SimonAbdullah/redisson-local-map/issues"
   },
-  "homepage": "https://github.com/SimonAbdullah/redisson-put-client",
+  "homepage": "https://github.com/SimonAbdullah/redisson-local-map",
   "dependencies": {
     "highwayhash-nodejs": "^1.0.5",
     "redis": "^4.0.3"
