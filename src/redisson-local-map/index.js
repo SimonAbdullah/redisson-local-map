@@ -28,16 +28,6 @@ const getInstance = (config) => {
     fieldHashBuffer.copy(msg, 21);
 
     await redisClient.publish(channel, msg);
-
-    // const res = await redisClient.eval(
-    //   `local v = redis.call("hget", KEYS[1], ARGV[1]); redis.call("hset", KEYS[1], ARGV[1], ARGV[2]); redis.call("publish", KEYS[2], ARGV[3]); return v;`,
-    //   2,
-    //   key,
-    //   channel,
-    //   field,
-    //   value,
-    //   msg.toString('hex')
-    // );
   };
 
   return {
@@ -45,6 +35,13 @@ const getInstance = (config) => {
       try {
         await redisClient.hSet(key, field, value);
         await publishInvalidationMessage(key, field);
+      } catch (err) {
+        if (callback) callback(undefined, err);
+      }
+    },
+    getAsync: async (key, field, callback) => {
+      try {
+        return await redisClient.hGet(key, field);
       } catch (err) {
         if (callback) callback(undefined, err);
       }
